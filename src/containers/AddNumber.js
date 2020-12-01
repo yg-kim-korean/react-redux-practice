@@ -11,4 +11,13 @@
 //-----------------------------react redux로 변환
 import AddNumber from '../components/AddNumber';
 import {connect} from 'react-redux';
-export default connect()(AddNumber);
+
+
+function mapDispatchToProps(dispatch){
+    return {
+        onClick:function(size){
+            dispatch({type: 'INCREMENT', size: size});
+        }
+    }
+}
+export default connect(null,mapDispatchToProps)(AddNumber);

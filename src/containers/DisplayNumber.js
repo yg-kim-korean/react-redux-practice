@@ -24,7 +24,5 @@ function mapReduxStateToReactProps(state){
         number:state.number
     }
 }
-function mapReduxDispatchToReactProps(){
-    return{}
-}
-export default connect(mapReduxStateToReactProps, mapReduxDispatchToReactProps)(DisplayNumber);
+
+export default connect(mapReduxStateToReactProps)(DisplayNumber);
